@@ -1,0 +1,29 @@
+{
+  "shell": "src/orlog-main.js",
+  "entrypoint": "index.html",
+  "fragments": [
+    "src/elements/orlog-button.js",
+    "src/elements/orlog-router.js",
+    "src/elements/orlog-veil.js",
+    "src/pages/orlog-game.js",
+    "src/pages/orlog-home.js",
+    "src/pages/orlog-how.js"
+  ],
+  "npm": true,
+  "moduleResolution": "node",
+  "sources": ["src/**/*", "manifest/**", "manifest.json", "package.json"],
+  "extraDependencies": [
+    "robots.txt",
+    "node_modules/@webcomponents/webcomponentsjs/**"
+  ],
+  "builds": [{
+    "bundle": true,
+    "js": { 
+      "minify": true,
+      "compile": "es5",
+      "transformModulesToAmd": true
+    },
+    "addServiceWorker": false,
+    "addPushManifest": true
+  }]
+}

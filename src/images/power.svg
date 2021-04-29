@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="Grupo_1"
+   data-name="Grupo 1"
+   width="500"
+   height="500"
+   viewBox="0 0 500 500"
+   version="1.1">
+  <metadata
+     id="metadata29">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs12">
+    <style
+       id="style10">
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path
+     id="circle_copia"
+     d="M 111.5,0 A 111.5,111.5 0 0 0 105,222.81055 V 223 h 57 v 54 h -54 v 0.0566 A 111.5,111.5 0 0 0 0,388.5 111.5,111.5 0 0 0 222.81055,395 H 223 v -57 h 54 v 57 h 0.18945 A 111.5,111.5 0 0 0 500,388.5 111.5,111.5 0 0 0 392,277.05664 V 277 h -54 v -54 h 54 v -0.0566 A 111.5,111.5 0 0 0 500,111.5 111.5,111.5 0 0 0 277.18945,105 H 277 V 111.7207 162 h -54 v -54 h -0.0566 A 111.5,111.5 0 0 0 111.5,0 Z m 0,61 A 50.5,50.5 0 0 1 162,111.5 V 162 H 111.20508 A 50.500215,50.500215 0 0 1 111.5,61 Z m 276.84766,0 A 50.5,50.5 0 0 1 439,111.5 50.5,50.5 0 0 1 388.5,162 H 338 v -50.5 a 50.5,50.5 0 0 1 0,-0.29492 A 50.5,50.5 0 0 1 388.34766,61 Z M 223,223 h 54 v 54 H 223 Z M 111.5,338 H 162 v 50.5 a 50.5,50.5 0 0 1 -101,0 50.5,50.5 0 0 1 50.5,-50.5 z m 226.5,0 h 50.5 a 50.5,50.5 0 0 1 50.5,50.5 50.5,50.5 0 0 1 -101,0 z" />
+</svg>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <!-- Register service worker if supported. -->
+  <!--
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  </script>
+  -->
+  
+  <!-- Load polyfills -->
+  <script 
+    src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
+    defer>
+  </script> 
+
+  <!-- Load components via WebComponents.waitFor -->
+  <script type="module">
+    window.WebComponents = window.WebComponents || { 
+      waitFor(cb){ addEventListener('WebComponentsReady', cb) }
+    } 
+    WebComponents.waitFor(async () => { 
+      import('./src/orlog-main.js');
+    });
+  </script>
+  
+
+  <meta name="description" content="Orlog is a dice game from Assassin's Creed Valhalla">
+  <meta name="keywords" content="Orlog, assassins, creed, valhalla, dice, ubisoft"/>
+  <meta name="theme-color" content="#000">
+  <title>Orlog</title>
+
+  <meta property="og:title" content="Orlog"/>
+  <meta property="og:description" content="Orlog is a dice game from Assassin's Creed Valhalla"/>
+  <meta property="og:keywords" content="orlog, online, web, valhalla, assassins, creed"/>
+  <meta property="og:image" content="/manifest/favicon.png">
+
+  <meta property="og:type" content="website">
+  <meta name='viewport' content='initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width'>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="shortcut icon" href="/manifest/favicon.ico" type="image/x-icon">
+  <link href="/manifest/icon-144x144.png" sizes="144x144" rel="apple-touch-icon">
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=PT+Serif:wght@400;700&display=swap');  
+  @import './src/icons.css';
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: rgb(207, 207, 207);
+    display: block;
+    margin: 0 auto;
+    max-width: 720px;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+  }
+
+</style>
+<body>
+  <div class="wrapper">
+    <orlog-main>
+      <!-- Placeholders to improve time to first paint -->
+      <h1>Loading...</h1>
+  
+      <!-- Check for JavaScript -->
+      <p id="jsyes"></p>
+      <script type="text/javascript">
+        document.getElementById('jsyes').innerHTML='Loading...';
+      </script>
+      <noscript>
+        Could not render the custom element. Check that JavaScript is enabled.
+      </noscript>
+    </orlog-main>
+  </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDEzLDT2SV1eMee4MAjvaRkmGoxf1HX-sU",
+      authDomain: "orlog-online.firebaseapp.com",
+      projectId: "orlog-online",
+      storageBucket: "orlog-online.appspot.com",
+      messagingSenderId: "529960914864",
+      appId: "1:529960914864:web:07a48a2c50498e6bf01075"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</body>
+
+
+</html>

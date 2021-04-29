@@ -1,0 +1,16 @@
+{
+  "name": "orlog-main",
+  "version": "1.0.0",
+  "description": "orlog-main",
+  "main": "orlog-main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AlexArroyoDuque",
+  "license": "licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional",
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "latest",
+    "lit-element": "latest",
+    "lit-element-router": "^2.0.3"
+  }
+}
