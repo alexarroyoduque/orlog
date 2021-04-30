@@ -23,7 +23,6 @@ export class OrlogVeil extends LitElement {
   static get styles() {
     return css`
       :host {
-        position: relative;
         display: block;
       }
 
@@ -31,10 +30,9 @@ export class OrlogVeil extends LitElement {
         position: absolute;
         z-index: 9999;
         background-color: var(--theme-color-black);
-        min-height: 100vh;
         width: 100%;
-        box-sizing: border-box;
-        max-width: 720px;
+        top: 2.9rem;
+        left: 0;
       }
 
       .title-fixed [name="title"] {
@@ -50,7 +48,6 @@ export class OrlogVeil extends LitElement {
         position: fixed;
         background-color: var(--theme-color-black);
         width: 100%;
-        max-width: 720px;
         text-align: center;
         top: 0;
         min-height: 2.2rem;
@@ -67,17 +64,17 @@ export class OrlogVeil extends LitElement {
 
       .title-fixed > div, .footer-fixed > div {
         display: block;
-        padding: .5rem;
       }
 
       .content {
-        padding: .5rem;
-        margin: 4rem 0 4rem;
+        margin: 1rem auto 4rem;
+        min-height: calc(100vh - 6rem);
+        max-width: 720px;
       }
 
       ::slotted(h1), ::slotted(h2) {
         color: var(--theme-color-turqoise-light);
-        margin: 0;
+        margin: 0 .5rem;
         font-size: 1.4rem;
         border-bottom: 2px solid var(--theme-color-turqoise-light);
         font-family: var(--theme-primary-font-family);

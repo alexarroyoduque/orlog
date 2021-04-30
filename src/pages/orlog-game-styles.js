@@ -3,8 +3,10 @@ import { css } from 'lit-element';
 export const gameStyles = css`
 :host {
   background-color: #000;
-  height: 100vh;
+  box-shadow: 0px 0 8px 4px black;
   display: block;
+  max-width: 720px;
+  margin: 0 auto;
 
   font-family: var(--theme-secondary-font-family);
   font-size: .9rem;
@@ -22,7 +24,6 @@ orlog-button .priority {
 .grid-container {
   position: relative;
   display: block;
-  min-height: 100vh;
   width: 100%;
 }
 
@@ -43,7 +44,7 @@ orlog-veil p {
 
 orlog-veil ul {
   margin: 0;
-  padding: 0;
+  padding: 0px 1rem;;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -146,7 +147,7 @@ orlog-button[type="secondary"] .icon-power {
 
 .dice {
   position: relative;
-  font-size: 2.1rem;
+  font-size: 2rem;
   background-color: rgb(255, 255, 255, 0.2);
   color: white;
   display: flex;
@@ -239,7 +240,7 @@ i {
 
 .player-hud {
   color: white;
-  text-align: center;
+  font-size: 1.1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 5vh;
@@ -253,7 +254,7 @@ i {
   transition: opacity .3s ease-out;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 15vh;
+  grid-template-rows: 13vh;
   gap: 2px;
   grid-template-areas:
     ". . . . . .";
@@ -266,7 +267,7 @@ i {
 .central-zone {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 16vh;
+  grid-template-rows: 14vh;
   gap: 0px 0px;
   grid-template-areas:
     ". . . . . .";
@@ -277,7 +278,7 @@ i {
   text-align: center;
   background-color: #f7f4f0;
   box-shadow: inset 1px 1px 4rem -1rem black;
-  padding: .5rem;
+  padding: .2rem;
   background-image: url('./src/images/dirty-black.png');
   background-size: cover;
 }
@@ -287,8 +288,8 @@ i {
 }
 .messages p:first-child{
   font-family: var(--theme-primary-font-family);
-  margin: 0 3rem 0.5rem;
-  padding: .2rem;
+  margin: 0 3rem 0.3rem;
+  padding: .1rem;
   font-size: 1rem;
   border-bottom: 1px solid rgb(0 0 0 / 30%);
 }
@@ -316,6 +317,7 @@ i {
 .dashboard-powers {
   padding: .5rem .25rem;
 }
+
 .player-powers button {
   width: 100%;
   margin: 0;
@@ -326,7 +328,7 @@ i {
 
 .player-powers .cost {
   padding: 0;
-  margin: .2rem 0 0 0;;
+  margin: 1px 0 0;
   font-size: .8rem;
   text-align: center;
   color: white;
@@ -369,7 +371,7 @@ orlog-veil orlog-button[type="primary"] {
 .dashboard-powers orlog-button {
   width: 100%;
   font-size: .7rem;
-  --orlog-button-padding: .2rem;
+  --orlog-button-padding: 0;
   --orlog-button-min-height: 3rem;
 }
 
@@ -383,8 +385,14 @@ orlog-veil orlog-button[type="primary"] {
 }
 
 @media (min-width: 370px) {
+
+  .dashboard-powers orlog-button {
+    --orlog-button-padding: .2rem;
+    --orlog-button-min-height: 3.2rem;
+  }
+
   .dice {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
   .dice-special-help {
     font-size: 1.2rem;
@@ -398,12 +406,10 @@ orlog-veil orlog-button[type="primary"] {
   }
 
   .player-powers .cost {
-    font-size: 1rem;
+    font-size: .9rem;
+    margin: .1rem 0 0;
   }
 
-  .player-hud {
-    font-size: 1.1rem;
-  }
   .health, .power {
     font-size: 1.2rem;
   }

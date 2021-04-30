@@ -39,7 +39,7 @@
   <meta property="og:image" content="/manifest/favicon.png">
 
   <meta property="og:type" content="website">
-  <meta name='viewport' content='initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width'>
+  <meta name='viewport' content='initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes, width=device-width'>
   <link rel="manifest" href="./manifest.json">
   <link rel="shortcut icon" href="/manifest/favicon.ico" type="image/x-icon">
   <link href="/manifest/icon-144x144.png" sizes="144x144" rel="apple-touch-icon">
@@ -55,34 +55,52 @@
   html {
     scroll-behavior: smooth;
   }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
 
   body {
     background-color: rgb(207, 207, 207);
-    display: block;
-    margin: 0 auto;
-    max-width: 720px;
+    /* https://www.pexels.com/es-es/foto/foto-de-la-aurora-boreal-en-la-noche-40023/ */
+    background-image: url('../src/images/background.jpg');
   }
 
-  .wrapper {
-    margin: 0 auto;
-  }
+  .main {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+.wrapper {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
 
 </style>
 <body>
-  <div class="wrapper">
-    <orlog-main>
-      <!-- Placeholders to improve time to first paint -->
-      <h1>Loading...</h1>
-  
-      <!-- Check for JavaScript -->
-      <p id="jsyes"></p>
-      <script type="text/javascript">
-        document.getElementById('jsyes').innerHTML='Loading...';
-      </script>
-      <noscript>
-        Could not render the custom element. Check that JavaScript is enabled.
-      </noscript>
-    </orlog-main>
+  <div class="main">
+    <div class="wrapper">
+      <orlog-main>
+        <!-- Placeholders to improve time to first paint -->
+        <h1>Loading...</h1>
+    
+        <!-- Check for JavaScript -->
+        <p id="jsyes"></p>
+        <script type="text/javascript">
+          document.getElementById('jsyes').innerHTML='Loading...';
+        </script>
+        <noscript>
+          Could not render the custom element. Check that JavaScript is enabled.
+        </noscript>
+      </orlog-main>
+    </div>
   </div>
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
