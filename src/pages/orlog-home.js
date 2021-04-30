@@ -110,7 +110,7 @@ export class OrlogHome extends navigator(LitElement) {
 
       a {
         color: var(--theme-color-turqoise);
-        box-shadow: #000 0px 0px 3px;
+        text-shadow: #000 0px 0px 3px;
       }
 
       .about {

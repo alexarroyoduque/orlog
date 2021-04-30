@@ -54,7 +54,7 @@ orlog-veil ul {
 
 orlog-veil ul li {
   width: 100%;
-  margin-top: 1rem;
+  margin-top: .8rem;
 }
 
 @media (min-width: 490px) {
@@ -244,6 +244,7 @@ i {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 5vh;
+  min-height: 1.75rem;
   gap: 0px 0px;
   grid-template-areas:
     ". . . .";
@@ -308,14 +309,15 @@ i {
 .player-powers {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 22vh;
+  /* grid-template-rows: 22vh; */
+  min-height: 17vh;
   gap: 0px 0px;
   grid-template-areas:
     ". . .";
 }
 
 .dashboard-powers {
-  padding: .5rem .25rem;
+  padding: 0.6rem 0.25rem 0;
 }
 
 .player-powers button {
@@ -326,9 +328,13 @@ i {
   padding: .2rem;
 }
 
+.costs {
+  margin: 0.2rem 0 0 0;
+  text-align: center;
+}
+
 .player-powers .cost {
   padding: 0;
-  margin: 1px 0 0;
   font-size: .8rem;
   text-align: center;
   color: white;

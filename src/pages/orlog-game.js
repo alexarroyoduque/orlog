@@ -1286,10 +1286,13 @@ export class OrlogGame extends LitElement {
             <div class="dashboard-powers">
               <orlog-button type="secondary" @click="${() => this.selectBattlePower(this.player2, power)}" ?disabled=${!this.canSelectBattlePower(this.player2, power)}>
                 ${power.name}
-              </orlog-button> 
-              ${power.uses.map(use => html`
-                <p class="cost ${this.getTotalPower(this.player2) < use.cost ? 'impossible' : ''}"><i class="icon-power"></i>${use.cost}</p>
-              `)}
+              </orlog-button>
+              <p class="costs">
+                ${power.uses.map(use => html`
+                  <span class="cost ${this.getTotalPower(this.player2) < use.cost ? 'impossible' : ''}"><i class="icon-power"></i>${use.cost}</span>
+                `)}
+              </p>
+
             </div>
           `)}
         </div>
@@ -1383,9 +1386,11 @@ export class OrlogGame extends LitElement {
               <orlog-button type="secondary" @click="${() => this.selectBattlePower(this.player1, power)}" ?disabled=${!this.canSelectBattlePower(this.player1, power)}>
                 ${power.name}
               </orlog-button> 
-              ${power.uses.map(use => html`
-                <p class="cost ${this.getTotalPower(this.player1) < use.cost ? 'impossible' : ''}"><i class="icon-power"></i>${use.cost}</p>
-              `)}
+              <p class="costs">
+                ${power.uses.map(use => html`
+                  <span class="cost ${this.getTotalPower(this.player1) < use.cost ? 'impossible' : ''}"><i class="icon-power"></i>${use.cost}</span>
+                `)}
+              </p>
             </div>
           `)}
         </div>
