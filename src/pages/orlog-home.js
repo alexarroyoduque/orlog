@@ -84,12 +84,18 @@ export class OrlogHome extends navigator(LitElement) {
       }
 
       h1.main-title {
-        margin: 1rem 0;
-        letter-spacing: .2rem;
+        margin: 1rem 0 .2rem 0;
+        letter-spacing: .4rem;
         font-family: var(--theme-primary-font-family);
-        font-size: 3.1rem;
+        font-size: 3.8rem;
         color: var(--theme-color-turqoise);
         text-shadow: 0px 0px .4rem black;
+      }
+
+      .title-icons {
+        display: block;
+        font-size: 1.5rem;
+        margin: 0 0 1rem 0;
       }
 
       h3 {
@@ -276,7 +282,13 @@ export class OrlogHome extends navigator(LitElement) {
           <i class="icon-music"></i>
         </orlog-button>
         <h1 class="main-title">ORLOG</h1>
-
+        <span class="title-icons">
+          <i class="icon-arrow"></i>
+          <i class="icon-shield"></i>
+          <i class="icon-axe-double"></i>
+          <i class="icon-helmet"></i>
+          <i class="icon-hand"></i>
+        </span>
         <orlog-button class="main" type="primary" selectable @click=${this.goToGame}>Play</orlog-button>
         <orlog-button class="main" type="primary" selectable @click=${this._openVeil}>How to play</orlog-button>
 
